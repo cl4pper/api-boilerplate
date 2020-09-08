@@ -1,0 +1,44 @@
+{
+	"name": "mini-server",
+	"version": "1.0.0",
+	"description": "A mini server to run simple pages",
+	"main": "server.js",
+	"scripts": {
+		"server": "NODE_ENV=dev nodemon ./server.js",
+		"lint:fix": "prettier --write '**/*.js'",
+		"test": "NODE_ENV=dev jest --watch --config ./jest.config.js --testEnvironment=node",
+		"test:verbose": "jest --watch --verbose=true --config ./jest.config.js",
+		"testing": "jest --watchAll --config ./jest.config.json"
+	},
+	"jest": {
+		"testEnvironment": "node"
+	},
+	"author": "cl4pper@gmail.com",
+	"license": "ISC",
+	"dependencies": {
+		"@hapi/joi": "^17.1.0",
+		"bcrypt": "^4.0.0",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"jsonwebtoken": "^8.5.1",
+		"module-alias": "^2.2.2",
+		"mongoose": "^5.8.3"
+	},
+	"devDependencies": {
+		"babel-plugin-module-resolver": "^4.0.0",
+		"eslint": "^6.8.0",
+		"eslint-plugin-jest": "^23.6.0",
+		"factory-girl": "^5.0.4",
+		"faker": "^4.1.0",
+		"jest": "^24.9.0",
+		"supertest": "^4.0.2"
+	},
+	"_moduleAliases": {
+		"@modules": "./src/modules",
+		"@models": "./src/models",
+		"@tests": "./src/tests",
+		"@middlewares": "./src/middlewares",
+		"@utils": "./src/utils"
+	}
+}
