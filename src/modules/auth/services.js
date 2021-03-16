@@ -1,12 +1,12 @@
 // MODELS
 const { User } = require('@models');
 
-function getUsername(query) {
+function getByUsername(query) {
 	try {
 		const user = User.findOne({ username: query });
 		return user;
 	} catch (err) {
-		throw Error('Error at getUsername: ', err);
+		throw Error('Error at auth > getByUsername: ', err);
 	}
 }
 
@@ -14,11 +14,11 @@ function createUser(user) {
 	try {
 		return user.save();
 	} catch (err) {
-		throw Error('Error at createUser: ', err);
+		throw Error('Error at auth > createUser: ', err);
 	}
 }
 
 module.exports = {
-	getUsername,
+	getByUsername,
 	createUser
 };
