@@ -11,10 +11,6 @@ const User = mongoose.model(
 			type: String,
 			required: true
 		},
-		friends: {
-			type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-			require: true
-		},
 		createdAt: {
 			type: Date,
 			required: true
