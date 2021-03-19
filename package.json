@@ -6,9 +6,8 @@
 	"scripts": {
 		"server": "NODE_ENV=dev nodemon ./server.js",
 		"lint:fix": "prettier --write '**/*.js'",
-		"test": "NODE_ENV=dev jest --watch --config ./jest.config.js --testEnvironment=node",
-		"test:verbose": "jest --watch --verbose=true --config ./jest.config.js",
-		"testing": "jest --watchAll --config ./jest.config.json"
+		"test": "NODE_ENV=test jest --watch --testEnvironment=node",
+		"test:verbose": "NODE_ENV=test jest --watch --verbose=true"
 	},
 	"jest": {
 		"testEnvironment": "node"
